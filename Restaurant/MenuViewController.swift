@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MenuViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
@@ -39,6 +40,9 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
    let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -48,13 +52,9 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         badge(String(cartValue))
         
         
-        
     }
+   
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemTitle.count

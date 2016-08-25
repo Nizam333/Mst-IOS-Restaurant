@@ -399,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8XB-8e-hPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="1374"/>
+            <point key="canvasLocation" x="1221" y="2050"/>
         </scene>
         <!--Products-->
         <scene sceneID="Poo-Lh-LfN">
@@ -413,13 +413,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="234" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-jp-L1h">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="234" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MvC-jp-L1h">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.92114150524139404" green="0.94230329990386963" blue="0.74824601411819458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IdCellMenu" rowHeight="234" id="29o-qE-Tmi" customClass="MenuTableViewCell" customModule="Restaurant">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="234"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="234"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="29o-qE-Tmi" id="xdi-bA-k1z">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="233"/>
@@ -497,6 +497,7 @@
                             <constraint firstItem="MvC-jp-L1h" firstAttribute="top" secondItem="eDi-6h-Tu1" secondAttribute="bottom" constant="-20" id="svE-dM-tHj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="xpA-rn-wo1"/>
                     <navigationItem key="navigationItem" title="Products" id="BMg-Z3-xKo">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="5sQ-mg-pHI">
                             <color key="tintColor" red="0.18841338157653809" green="0.35589319467544556" blue="0.078435219824314117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -505,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9n-68-WlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="1382"/>
+            <point key="canvasLocation" x="554" y="1396"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="hqb-aC-MYK">
@@ -539,8 +540,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="navheader" translatesAutoresizingMaskIntoConstraints="NO" id="H1Q-lh-v0p">
                                                     <rect key="frame" x="13" y="8" width="183" height="113"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uq-hh-hY6">
-                                                    <rect key="frame" x="13" y="129" width="183" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="akhfjasjfhasfhasfhsa;fjhasfjksfhkshfsafk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uq-hh-hY6">
+                                                    <rect key="frame" x="-48" y="129" width="305" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -560,7 +561,7 @@
                                         <connections>
                                             <outlet property="myimage" destination="H1Q-lh-v0p" id="27W-HH-bOy"/>
                                             <outlet property="mylabel" destination="4uq-hh-hY6" id="vWN-ph-W9o"/>
-                                            <segue destination="aN5-fr-O2J" kind="push" id="kSy-jo-FB1"/>
+                                            <segue destination="oNv-QO-Jow" kind="push" id="v19-Fv-LPO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -591,7 +592,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTA-3S-0W8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304" y="1382"/>
+            <point key="canvasLocation" x="-720" y="1388"/>
         </scene>
         <!--Myorders View Controller-->
         <scene sceneID="EQt-Sr-Czo">
@@ -702,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXt-HQ-P6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="2748"/>
+            <point key="canvasLocation" x="1320" y="2844"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="o9A-VM-KUd">
@@ -786,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXd-MV-lSp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="2748"/>
+            <point key="canvasLocation" x="2124" y="2838"/>
         </scene>
         <!--Gift Card View Controller-->
         <scene sceneID="sLi-ZF-tjT">
@@ -882,7 +883,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bnO-D3-0Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="2050"/>
+            <point key="canvasLocation" x="2116" y="2146"/>
         </scene>
         <!--TandC View Controller-->
         <scene sceneID="M1t-ca-OpD">
@@ -952,7 +953,24 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7R-Og-hCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168" y="1382"/>
+            <point key="canvasLocation" x="-1356" y="1388"/>
+        </scene>
+        <!--Custom Tab Bar View Controller-->
+        <scene sceneID="g5O-fS-mJY">
+            <objects>
+                <tabBarController id="oNv-QO-Jow" customClass="CustomTabBarViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SI7-km-qVU"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eNi-tl-TVe">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.73111832141876221" green="0.92926591634750366" blue="0.67224013805389404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9DP-Ek-38Z" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80" y="1396"/>
         </scene>
     </scenes>
     <resources>

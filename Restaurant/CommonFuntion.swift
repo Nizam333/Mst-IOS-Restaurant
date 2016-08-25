@@ -11,6 +11,9 @@ import UIKit
 class CommonFuntion {
     
     
+   
+    
+    
     func jsonparsing() {
     //Making Connection
     let urlAsString = "http://jsonplaceholder.typicode.com/posts/1"

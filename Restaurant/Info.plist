@@ -26,9 +26,7 @@
 		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>jsonplaceholder.typicode.com</key>
-			<string></string>
-			<key>date.jsontest.com</key>
+			<key>http://52.27.125.60</key>
 			<string></string>
 		</dict>
 	</dict>
