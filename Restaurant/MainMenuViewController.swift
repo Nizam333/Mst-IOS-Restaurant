@@ -31,19 +31,13 @@ class MainMenuViewController: UIViewController , UICollectionViewDataSource, UIC
     
     var swiftImages:[UIImage] = []
     
-    let itemTitle=[
-        "Chicken",
-        "Mutton",
-        "Veg","Beverage",
-        "Chowder",
-        "Grill","Roast",
-        "Jamal",
-        "Macroni","Almtluth",
-        "Meat",
-        "sweets"
-    ]
+    
 
-     @IBOutlet var collectionview: UICollectionView!
+    var id_index = 0
+    
+    @IBOutlet var collectionview: UICollectionView!
+    
+    
     
     
     // tell the collection view how many cells to make
@@ -91,7 +85,12 @@ class MainMenuViewController: UIViewController , UICollectionViewDataSource, UIC
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        
+        id_index=indexPath.row
+        
+        
     }
+   
     override func viewWillLayoutSubviews() {
         //collectionview.collectionViewLayout.invalidateLayout()
     }

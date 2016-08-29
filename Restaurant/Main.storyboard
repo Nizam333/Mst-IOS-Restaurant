@@ -497,7 +497,7 @@
                             <constraint firstItem="MvC-jp-L1h" firstAttribute="top" secondItem="eDi-6h-Tu1" secondAttribute="bottom" constant="-20" id="svE-dM-tHj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="xpA-rn-wo1"/>
+                    <tabBarItem key="tabBarItem" id="xpA-rn-wo1"/>
                     <navigationItem key="navigationItem" title="Products" id="BMg-Z3-xKo">
                         <barButtonItem key="rightBarButtonItem" title="Cart" id="5sQ-mg-pHI">
                             <color key="tintColor" red="0.18841338157653809" green="0.35589319467544556" blue="0.078435219824314117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -561,7 +561,7 @@
                                         <connections>
                                             <outlet property="myimage" destination="H1Q-lh-v0p" id="27W-HH-bOy"/>
                                             <outlet property="mylabel" destination="4uq-hh-hY6" id="vWN-ph-W9o"/>
-                                            <segue destination="oNv-QO-Jow" kind="push" id="v19-Fv-LPO"/>
+                                            <segue destination="oNv-QO-Jow" kind="push" identifier="idSagueApplication" id="NcX-By-4wO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -955,10 +955,10 @@
             </objects>
             <point key="canvasLocation" x="-1356" y="1388"/>
         </scene>
-        <!--Custom Tab Bar View Controller-->
+        <!--Custom Tab Bar Controller-->
         <scene sceneID="g5O-fS-mJY">
             <objects>
-                <tabBarController id="oNv-QO-Jow" customClass="CustomTabBarViewController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="oNv-QO-Jow" customClass="CustomTabBarController" customModule="Restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="SI7-km-qVU"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="eNi-tl-TVe">
