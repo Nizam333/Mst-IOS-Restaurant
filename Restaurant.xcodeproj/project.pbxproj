@@ -12,7 +12,7 @@
 		5128CB881D41EE5300EF38E6 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5128CB871D41EE5300EF38E6 /* MenuTableViewCell.swift */; };
 		512C4D321D45DE5F00BCAFDA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 512C4D311D45DE5F00BCAFDA /* Podfile */; };
 		512C4D351D45E6D400BCAFDA /* MIBadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4D341D45E6D400BCAFDA /* MIBadgeButton.swift */; };
-		512C4D371D46119D00BCAFDA /* CommonFuntion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4D361D46119C00BCAFDA /* CommonFuntion.swift */; };
+		512C4D371D46119D00BCAFDA /* CommonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512C4D361D46119C00BCAFDA /* CommonFunction.swift */; };
 		51D899911D3F5A2B008A9F56 /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D899901D3F5A2B008A9F56 /* RewardsViewController.swift */; };
 		51D899931D3F5A45008A9F56 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D899921D3F5A45008A9F56 /* ReservationViewController.swift */; };
 		51D899951D3F5A57008A9F56 /* GiftCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D899941D3F5A57008A9F56 /* GiftCardViewController.swift */; };
@@ -39,6 +39,7 @@
 		A14734D4A5DA8DF3E2D471F8 /* Pods_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB31EF3DFD7CB87843EEA59 /* Pods_Restaurant.framework */; };
 		A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86DA9D31D6DA24600E0E208 /* Urls.swift */; };
 		A8D605E61D6ECB9F005EF430 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */; };
+		A8E102511D783CAA002887C7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E102501D783CAA002887C7 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,7 @@
 		5128CB871D41EE5300EF38E6 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		512C4D311D45DE5F00BCAFDA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		512C4D341D45E6D400BCAFDA /* MIBadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIBadgeButton.swift; sourceTree = "<group>"; };
-		512C4D361D46119C00BCAFDA /* CommonFuntion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFuntion.swift; sourceTree = "<group>"; };
+		512C4D361D46119C00BCAFDA /* CommonFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunction.swift; sourceTree = "<group>"; };
 		51D899901D3F5A2B008A9F56 /* RewardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		51D899921D3F5A45008A9F56 /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		51D899941D3F5A57008A9F56 /* GiftCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCardViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		75B28DFE3D915F4A5C48F246 /* Pods-Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A86DA9D31D6DA24600E0E208 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A8E102501D783CAA002887C7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		DC92A8FFA92F01E7B3FA68A0 /* Pods-Restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		5128CB831D41EA8100EF38E6 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A8D605E41D6EC94B005EF430 /* SubMenu */,
 				511CE63B1D40DADA0070BC3F /* MainMenuCollectionViewCell.swift */,
 				51F313681D3E53F900BC88BE /* MainMenuViewController.swift */,
 			);
@@ -156,21 +159,20 @@
 			name = Badge;
 			sourceTree = "<group>";
 		};
-		51D8998F1D3F59C1008A9F56 /* MenuViewControllers */ = {
+		51D8998F1D3F59C1008A9F56 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				A8D605E41D6EC94B005EF430 /* SubMenu */,
+				A8490C581D76B534009FDBE7 /* Main View */,
 				5128CB831D41EA8100EF38E6 /* MainMenu */,
-				51F3136A1D3E541100BC88BE /* MyordersViewController.swift */,
-				51D899901D3F5A2B008A9F56 /* RewardsViewController.swift */,
-				51D899921D3F5A45008A9F56 /* ReservationViewController.swift */,
-				51D899941D3F5A57008A9F56 /* GiftCardViewController.swift */,
-				51D899961D3F5A73008A9F56 /* MyProfileViewController.swift */,
-				51D899981D3F5B08008A9F56 /* TandCViewController.swift */,
-				51D8999A1D3F5FD0008A9F56 /* CallusViewController.swift */,
-				512C4D361D46119C00BCAFDA /* CommonFuntion.swift */,
+				A8490C531D76B499009FDBE7 /* Manage */,
+				A8490C521D76B469009FDBE7 /* MyOrders */,
+				A8490C591D76B5F7009FDBE7 /* Cart */,
+				A8490C561D76B4D2009FDBE7 /* Gift Card */,
+				A8490C551D76B4BE009FDBE7 /* Reservation */,
+				A8490C541D76B4AE009FDBE7 /* Rewards */,
+				A8490C571D76B506009FDBE7 /* Support Clasess */,
 			);
-			name = MenuViewControllers;
+			name = Project;
 			sourceTree = "<group>";
 		};
 		51F312C61D3DE74100BC88BE = {
@@ -200,23 +202,14 @@
 			isa = PBXGroup;
 			children = (
 				512C4D331D45E68200BCAFDA /* Badge */,
-				51D8998F1D3F59C1008A9F56 /* MenuViewControllers */,
+				51D8998F1D3F59C1008A9F56 /* Project */,
 				51F313651D3E023600BC88BE /* KYDrawerController */,
-				51F313541D3E012100BC88BE /* MainViewControllerObjc.h */,
-				51F313551D3E012100BC88BE /* MainViewControllerObjc.m */,
-				51F3135A1D3E013A00BC88BE /* MainViewController.swift */,
-				51F3135B1D3E013A00BC88BE /* DrawerViewController.swift */,
-				51F313561D3E012100BC88BE /* Menu.h */,
-				51F313571D3E012100BC88BE /* Menu.m */,
 				51F312D21D3DE74100BC88BE /* AppDelegate.swift */,
 				51F313661D3E02A400BC88BE /* Main.storyboard */,
 				51F312D91D3DE74100BC88BE /* Assets.xcassets */,
 				51F312DB1D3DE74100BC88BE /* LaunchScreen.storyboard */,
 				51F312DE1D3DE74100BC88BE /* Info.plist */,
 				51F313531D3E012000BC88BE /* Restaurant-Bridging-Header.h */,
-				51D8999C1D3F7DD9008A9F56 /* LoginViewController.swift */,
-				51D8999E1D3F7F0A008A9F56 /* SignupViewController.swift */,
-				A86DA9D31D6DA24600E0E208 /* Urls.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -247,6 +240,80 @@
 				51F313611D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift */,
 			);
 			name = KYDrawerController;
+			sourceTree = "<group>";
+		};
+		A8490C521D76B469009FDBE7 /* MyOrders */ = {
+			isa = PBXGroup;
+			children = (
+				51F3136A1D3E541100BC88BE /* MyordersViewController.swift */,
+			);
+			name = MyOrders;
+			sourceTree = "<group>";
+		};
+		A8490C531D76B499009FDBE7 /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+				51D899981D3F5B08008A9F56 /* TandCViewController.swift */,
+				51D8999A1D3F5FD0008A9F56 /* CallusViewController.swift */,
+				51D899961D3F5A73008A9F56 /* MyProfileViewController.swift */,
+				51D8999C1D3F7DD9008A9F56 /* LoginViewController.swift */,
+				51D8999E1D3F7F0A008A9F56 /* SignupViewController.swift */,
+			);
+			name = Manage;
+			sourceTree = "<group>";
+		};
+		A8490C541D76B4AE009FDBE7 /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				51D899901D3F5A2B008A9F56 /* RewardsViewController.swift */,
+			);
+			name = Rewards;
+			sourceTree = "<group>";
+		};
+		A8490C551D76B4BE009FDBE7 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				51D899921D3F5A45008A9F56 /* ReservationViewController.swift */,
+			);
+			name = Reservation;
+			sourceTree = "<group>";
+		};
+		A8490C561D76B4D2009FDBE7 /* Gift Card */ = {
+			isa = PBXGroup;
+			children = (
+				51D899941D3F5A57008A9F56 /* GiftCardViewController.swift */,
+			);
+			name = "Gift Card";
+			sourceTree = "<group>";
+		};
+		A8490C571D76B506009FDBE7 /* Support Clasess */ = {
+			isa = PBXGroup;
+			children = (
+				A86DA9D31D6DA24600E0E208 /* Urls.swift */,
+				512C4D361D46119C00BCAFDA /* CommonFunction.swift */,
+				A8E102501D783CAA002887C7 /* Key.swift */,
+			);
+			name = "Support Clasess";
+			sourceTree = "<group>";
+		};
+		A8490C581D76B534009FDBE7 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				51F313541D3E012100BC88BE /* MainViewControllerObjc.h */,
+				51F313551D3E012100BC88BE /* MainViewControllerObjc.m */,
+				51F3135A1D3E013A00BC88BE /* MainViewController.swift */,
+				51F3135B1D3E013A00BC88BE /* DrawerViewController.swift */,
+				51F313561D3E012100BC88BE /* Menu.h */,
+				51F313571D3E012100BC88BE /* Menu.m */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		A8490C591D76B5F7009FDBE7 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cart;
 			sourceTree = "<group>";
 		};
 		A8D605E41D6EC94B005EF430 /* SubMenu */ = {
@@ -454,6 +521,7 @@
 				51D8999F1D3F7F0A008A9F56 /* SignupViewController.swift in Sources */,
 				51F313631D3E01F000BC88BE /* KYEmbedDrawerControllerSegue.swift in Sources */,
 				5128CB881D41EE5300EF38E6 /* MenuTableViewCell.swift in Sources */,
+				A8E102511D783CAA002887C7 /* Key.swift in Sources */,
 				A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */,
 				51F313581D3E012100BC88BE /* MainViewControllerObjc.m in Sources */,
 				51D899971D3F5A73008A9F56 /* MyProfileViewController.swift in Sources */,
@@ -470,7 +538,7 @@
 				51D899991D3F5B08008A9F56 /* TandCViewController.swift in Sources */,
 				51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */,
 				51D899911D3F5A2B008A9F56 /* RewardsViewController.swift in Sources */,
-				512C4D371D46119D00BCAFDA /* CommonFuntion.swift in Sources */,
+				512C4D371D46119D00BCAFDA /* CommonFunction.swift in Sources */,
 				51D8999D1D3F7DD9008A9F56 /* LoginViewController.swift in Sources */,
 				51D899951D3F5A57008A9F56 /* GiftCardViewController.swift in Sources */,
 				512C4D351D45E6D400BCAFDA /* MIBadgeButton.swift in Sources */,

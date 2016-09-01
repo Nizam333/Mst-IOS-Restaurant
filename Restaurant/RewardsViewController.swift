@@ -16,13 +16,13 @@ class RewardsViewController: UIViewController {
     
     @IBOutlet var timeTV: UILabel!
     
-    var jsonCall = CommonFuntion()
+    //var jsonCall = CommonFuntion()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     jsonCall.jsonparsing()
+     //jsonCall.jsonparsing()
     }
 
        

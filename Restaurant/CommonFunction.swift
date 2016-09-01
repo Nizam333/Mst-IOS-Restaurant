@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CommonFuntion {
+class CommonFunction {
     
     
-   
+   let LoginDetails = NSUserDefaults.standardUserDefaults()
     
     
     func jsonparsing() {

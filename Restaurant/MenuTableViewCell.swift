@@ -14,10 +14,11 @@ class MenuTableViewCell: UITableViewCell {
     
     @IBOutlet var itemImage: UIImageView!
     
-    @IBOutlet var itemPrice: UILabel!
+   // @IBOutlet var itemPrice: UILabel!
   
     @IBOutlet var itemName: UILabel!
    
+    @IBOutlet var itemprice: UILabel!
     
     @IBOutlet var itemAddCart: UIButton!
    

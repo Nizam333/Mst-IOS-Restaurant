@@ -19,6 +19,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     var cartValue :Int = 0
     
     var catId:String?
+    var catName:String?
     
    // var tab_title:String?
     
@@ -31,6 +32,12 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     var arr_rate:[String] = []
     var arr_desc:[String] = []
     var arr_image:[String] = []
+    
+    
+    var name:[String] = []
+    var rate:[String] = []
+    var image:[String] = []
+    
     
     var swiftImages:[UIImage] = []
 
@@ -49,13 +56,13 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     let itemprice=["30","40","50","20","10","23","34","56","76","65","43","21"]
     
-    let image=[UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor")]*/
+    let iimage=[UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor"),UIImage(named:"nizam"),UIImage(named:"jamal"),UIImage(named:"mansoor")]*/
     
     
+    @IBOutlet var tabView: UITableView!
    
     @IBOutlet var navItm: UIBarButtonItem!
-    @IBOutlet var tableView: UITableView!
-    
+        
    let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
     
     
@@ -64,43 +71,46 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         //self.tabBarItem.title = "gfdsg"
         print("cayId............... \(catId)")
         badge(String(cartValue))
-        request(catId)
+        
+         navigationController?.visibleViewController?.navigationItem.title = catName
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
-    
+    request(catId)
+        
+        
         
     }
    
     
-    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr_proid.count
+        return arr_name.count
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("selected indexpath \(indexPath.row)")
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("IdCellMenu", forIndexPath: indexPath) as! MenuTableViewCell
-       //let cell = tableView.dequeueReusableCellWithIdentifier("IdCellMenu") as! MenuTableViewCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("IdCellMenu", forIndexPath: indexPath) as! MenuTableViewCell
+       let cell = tableView.dequeueReusableCellWithIdentifier("IdCellMenu") as! MenuTableViewCell
         
         cell.itemName.text = arr_name[indexPath.row]
-        cell.itemPrice.text = arr_rate[indexPath.row]
+        cell.itemprice.text = arr_rate[indexPath.row]
+        //cell.imageView?.image = iimage[indexPath.row]
 
-       /*
-        let block: SDWebImageCompletionBlock! = {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType, imageURL: NSURL!) -> Void in
-            // print(error)
-        }
        
-        
-        
         cell.itemAddCart.tag = indexPath.row
         cell.itemAddCart.addTarget(self, action: "cartDetected:", forControlEvents: .TouchUpInside)
         
+        let block: SDWebImageCompletionBlock! = {(image: UIImage!, error: NSError!, cacheType: SDImageCacheType, imageURL: NSURL!) -> Void in
+            // print(error)
+        }
         
         let url = NSURL(string: self.arr_image[indexPath.row])
         print(url)
@@ -108,7 +118,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         cell.itemImage.sd_setImageWithURL(url, placeholderImage: UIImage(named: "navheader"), completed: block)
         
         cell.layer.shouldRasterize = true
-        cell.layer.rasterizationScale = UIScreen.mainScreen().scale */
+        cell.layer.rasterizationScale = UIScreen.mainScreen().scale
 
         
         return cell
@@ -170,16 +180,21 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
                     
                     
                     
-                    
                 }
-                //if let JSON = response.result.value {
-                //    print("JSON: \(JSON)")
-                //}
-                print(self.arr_image)
-                //
-                //self.tableView.reloadData()
-                //print(records)
+               
+                print(self.arr_rate)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    
+                    //self.name = self.arr_name
+                    //self.rate = self.arr_rate
+                    // self.image = self.arr_image
+                    self.tabView.reloadData()
+                    return
+                })
         }
+        
+        
 
     }
     

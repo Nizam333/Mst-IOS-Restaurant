@@ -5,7 +5,9 @@ class MainViewController: UIViewController {
     
     //@IBOutlet var textVw: UILabel!
     
-   
+   var cf = CommonFunction()
+    
+    var status:Bool = false
     
     @IBOutlet var containerView: UIView!
 
@@ -14,6 +16,8 @@ class MainViewController: UIViewController {
      //var idd=1
     
    let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
     
     
     override func viewDidDisappear(animated: Bool) {
@@ -25,7 +29,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        
+        status = cf.LoginDetails.boolForKey(Key().login_status)
         
         //Custom Badge View
         let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
@@ -53,7 +57,10 @@ class MainViewController: UIViewController {
       
         super.viewDidLoad()
         
-        print("viewdidload called")
+        
+        
+        
+        print("main viewdidload called \(ViewId)")
         
        
         
@@ -102,45 +109,90 @@ class MainViewController: UIViewController {
                 
             self.navigationItem.title="Main Menu"
         } else if id == 2{
-            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDmyorder")
-            newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
-            self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
-            self.currentViewController = newViewController
             
-            self.navigationItem.title="My Order"
+            if(self.status==true){
+                
+                let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDmyorder")
+                newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
+                self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
+                self.currentViewController = newViewController
+                
+                self.navigationItem.title="My Order"
+            
+            }else {
+            
+                Alert_Lgin("SIDlogin")
+            }
+           
             
         }
             else if id == 3{
+            
+            if(self.status==true){
+                
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDreservation")
                 newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
                 self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
                 self.currentViewController = newViewController
-             self.navigationItem.title="Reservations"
+                self.navigationItem.title="Reservations"
+                
+            }else {
+                
+                Alert_Lgin("SIDlogin")
+            }
+            
             
             } else if id == 4{
+            
+            if(self.status==true){
+                
+                
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDrewards")
                 newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
                 self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
                 self.currentViewController = newViewController
-             self.navigationItem.title="Rewards"
+                self.navigationItem.title="Rewards"
+                
+            }else {
+                
+                Alert_Lgin("SIDlogin")
+            }
             
         
             
             } else if id == 5{
+            
+            if(self.status==true){
+                
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDgiftcards")
                 newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
                 self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
                 self.currentViewController = newViewController
+                
+                self.navigationItem.title="Gift Cards"
+                
+            }else {
+                
+                Alert_Lgin("SIDlogin")
+            }
             
-             self.navigationItem.title="Gift Cards"
             
             } else if id == 6{
+            
+            if(self.status==true){
+                
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDmyprofile")
                 newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
                 self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
                 self.currentViewController = newViewController
+                
+                self.navigationItem.title="My Profile"
+                
+            }else {
+                
+                Alert_Lgin("SIDlogin")
+            }
             
-             self.navigationItem.title="My Profile"
             
             } else if id == 7{
                 let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SIDcallus")
@@ -191,6 +243,29 @@ class MainViewController: UIViewController {
             options: [], metrics: nil, views: viewBindingsDict))
     }
     
-    
+    func Alert_Lgin(var sbId:String)  {
+        
+            
+        let alert = UIAlertController(title: "Alert!!", message: "You are not signed in yet, Do you wnat Signin? ", preferredStyle: UIAlertControllerStyle.Alert)
+            //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action: UIAlertAction!) in
+            print("Handle Ok logic here")
+            let newViewController = self.storyboard?.instantiateViewControllerWithIdentifier(sbId)
+            newViewController!.view.translatesAutoresizingMaskIntoConstraints = false
+            self.cycleFromViewController(self.currentViewController!, toViewController: newViewController!)
+            self.currentViewController = newViewController
+            
+            self.navigationItem.title="Sign In"
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .Cancel, handler: { (action: UIAlertAction!) in
+            print("Handle Cancel Logic here")
+            
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+
+    }
     
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import ZRScrollableTabBar
+
 
 class CustomTabBarController: UITabBarController {
     
@@ -28,11 +30,33 @@ class CustomTabBarController: UITabBarController {
     
     var swiftImages:[UIImage] = []
     
+    var tabBarr:ZRScrollableTabBar?
+    
+    var item:[UITabBarItem]?
+    
+    
     var storyBoard:UIStoryboard?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let colorNormal : UIColor = UIColor.blackColor()
+        let colorSelected : UIColor = UIColor.whiteColor()
+        let titleFontAll : UIFont = UIFont(name: "American Typewriter", size: 10.0)!
+        
+        let attributesNormal = [
+            NSForegroundColorAttributeName : colorNormal,
+            NSFontAttributeName : titleFontAll
+        ]
+        
+        let attributesSelected = [
+            NSForegroundColorAttributeName : colorSelected,
+            NSFontAttributeName : titleFontAll
+        ]
+        
+        UITabBarItem.appearance().setTitleTextAttributes(attributesNormal, forState: .Normal)
+        UITabBarItem.appearance().setTitleTextAttributes(attributesSelected, forState: .Selected)
         
          storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         catergRequest()
@@ -52,6 +76,9 @@ class CustomTabBarController: UITabBarController {
                 
                 let records = response.result.value!.objectForKey("product") as! NSArray
                 self.dataRows = records
+                
+               
+                
                 
                 for var i = 0; self.dataRows.count > i; i += 1 {
                     
@@ -80,24 +107,55 @@ class CustomTabBarController: UITabBarController {
                     
                     
 
+                    //var itesss = UITabBarItem()
+                    //itesss.title = self.arr_prodname[i]
+                   var items = UITabBarItem(title:  self.arr_prodname[i], image: nil, tag: i)
+                    
+                    self.item?.append(items)
+                    
+                    
+                    
+                    let controller1 = self.storyBoard!.instantiateViewControllerWithIdentifier("SIDmenu") as! MenuViewController
+                    //controller1.tabBarController?.tabBar(tabBarr
+                      //  , didSelectItem: nil)
+                    controller1.tabBarItem = items
+                    
+                    controller1.catId = self.arr_categoryid[i]
+                    controller1.catName = self.arr_prodname[i]
+                    //controller1.navigationController?.visibleViewController?.navigationItem.title = self.arr_prodname[i]
+                   // controller1.tabBarItem.title = self.arr_prodname[i]
+                    //controller1.tabBarItem.image = self.arr_url[i]
+                    
                     
                    
-                    let controller1 = self.storyBoard!.instantiateViewControllerWithIdentifier("SIDmenu") as! MenuViewController
-                    //controller1.tabBarItem.title = self.arr_prodname[i]
-                    controller1.catId = self.arr_categoryid[i]
-                     controller1.tabBarItem.title = self.arr_prodname[i]
+                    
                     // setup "inner" view controller
                     //viewController.foo = bar
                     self.controllerArray.append(controller1)
                     
-                    self.setViewControllers(self.controllerArray, animated: false)
+                    
+
+                    
                     
                    
+                    
+                    
+                    //tabBarr.setItems(<#T##items: [AnyObject]!##[AnyObject]!#>, animated: <#T##Bool#>)
+                    //
+
                     
                    
                     
                     
                 }
+                
+                self.tabBarr = ZRScrollableTabBar(items: self.item)
+                self.tabBarr!.scrollableTabBarDelegate = self
+                //self.view!.addSubview(self.tabBarr!)
+                self.setViewControllers(self.controllerArray, animated: false)
+                //self.view!.addSubview(self.tabBarr!)
+
+               
                 //if let JSON = response.result.value {
                 //    print("JSON: \(JSON)")
                 //}
