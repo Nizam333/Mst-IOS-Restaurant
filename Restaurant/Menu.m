@@ -18,9 +18,19 @@
 
 @implementation Menu
 
-
+- (void)viewDidLoad:(BOOL)animated{
+    [super viewDidLoad];
+    
+    
+    
+       // [item release];
+    //bar.item.title= @"jkdhsa"
+    
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)newIndexPath{
+    
+   
     [tableView deselectRowAtIndexPath:newIndexPath animated:YES];
     
     KYDrawerController *elDrawer = (KYDrawerController*)self.navigationController.parentViewController;
@@ -30,6 +40,10 @@
     //NSString *myObjcData = @"from Objective-C";
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+   
+
+    
     
     switch ([newIndexPath row]) {
         

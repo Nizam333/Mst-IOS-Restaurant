@@ -17,4 +17,5 @@ class Key {
      var user_id = "id"
     var login_status = "loginstatus"
 
+    var cartValue = "cart"
 }

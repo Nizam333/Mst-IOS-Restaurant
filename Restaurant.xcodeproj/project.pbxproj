@@ -33,13 +33,19 @@
 		51F313621D3E01F000BC88BE /* KYDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3135F1D3E01F000BC88BE /* KYDrawerController.swift */; };
 		51F313631D3E01F000BC88BE /* KYEmbedDrawerControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F313601D3E01F000BC88BE /* KYEmbedDrawerControllerSegue.swift */; };
 		51F313641D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F313611D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift */; };
-		51F313671D3E02A400BC88BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F313661D3E02A400BC88BE /* Main.storyboard */; };
 		51F313691D3E53F900BC88BE /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F313681D3E53F900BC88BE /* MainMenuViewController.swift */; };
 		51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3136A1D3E541100BC88BE /* MyordersViewController.swift */; };
 		A14734D4A5DA8DF3E2D471F8 /* Pods_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB31EF3DFD7CB87843EEA59 /* Pods_Restaurant.framework */; };
+		A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA11D891DD80052476C /* CartViewController.swift */; };
+		A83B0AA41D891E320052476C /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA31D891E320052476C /* CartManager.swift */; };
+		A83B0AA61D8931520052476C /* CartProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA51D8931520052476C /* CartProductViewCell.swift */; };
+		A83B0AA81D8956DC0052476C /* ProductObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA71D8956DC0052476C /* ProductObject.swift */; };
+		A83B0AAA1D897EC50052476C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83B0AA91D897EC50052476C /* Main.storyboard */; };
 		A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86DA9D31D6DA24600E0E208 /* Urls.swift */; };
 		A8D605E61D6ECB9F005EF430 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */; };
 		A8E102511D783CAA002887C7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E102501D783CAA002887C7 /* Key.swift */; };
+		A8E6167A1D793B9600BC4C00 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E616791D793B9600BC4C00 /* OrdersTableViewCell.swift */; };
+		A8E6167C1D7983EC00BC4C00 /* DrawerNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6167B1D7983EC00BC4C00 /* DrawerNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,13 +102,19 @@
 		51F3135F1D3E01F000BC88BE /* KYDrawerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYDrawerController.swift; sourceTree = "<group>"; };
 		51F313601D3E01F000BC88BE /* KYEmbedDrawerControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedDrawerControllerSegue.swift; sourceTree = "<group>"; };
 		51F313611D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYEmbedMainControllerSegue.swift; sourceTree = "<group>"; };
-		51F313661D3E02A400BC88BE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		51F313681D3E53F900BC88BE /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		51F3136A1D3E541100BC88BE /* MyordersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyordersViewController.swift; sourceTree = "<group>"; };
 		75B28DFE3D915F4A5C48F246 /* Pods-Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.release.xcconfig"; sourceTree = "<group>"; };
+		A83B0AA11D891DD80052476C /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		A83B0AA31D891E320052476C /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		A83B0AA51D8931520052476C /* CartProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductViewCell.swift; sourceTree = "<group>"; };
+		A83B0AA71D8956DC0052476C /* ProductObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductObject.swift; sourceTree = "<group>"; };
+		A83B0AA91D897EC50052476C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A86DA9D31D6DA24600E0E208 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A8E102501D783CAA002887C7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		A8E616791D793B9600BC4C00 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
+		A8E6167B1D7983EC00BC4C00 /* DrawerNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerNameCell.swift; sourceTree = "<group>"; };
 		DC92A8FFA92F01E7B3FA68A0 /* Pods-Restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,7 +217,7 @@
 				51D8998F1D3F59C1008A9F56 /* Project */,
 				51F313651D3E023600BC88BE /* KYDrawerController */,
 				51F312D21D3DE74100BC88BE /* AppDelegate.swift */,
-				51F313661D3E02A400BC88BE /* Main.storyboard */,
+				A83B0AA91D897EC50052476C /* Main.storyboard */,
 				51F312D91D3DE74100BC88BE /* Assets.xcassets */,
 				51F312DB1D3DE74100BC88BE /* LaunchScreen.storyboard */,
 				51F312DE1D3DE74100BC88BE /* Info.plist */,
@@ -246,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				51F3136A1D3E541100BC88BE /* MyordersViewController.swift */,
+				A8E616791D793B9600BC4C00 /* OrdersTableViewCell.swift */,
 			);
 			name = MyOrders;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 		A8490C571D76B506009FDBE7 /* Support Clasess */ = {
 			isa = PBXGroup;
 			children = (
+				A87F75C41D86B28D006D1866 /* FMDB */,
 				A86DA9D31D6DA24600E0E208 /* Urls.swift */,
 				512C4D361D46119C00BCAFDA /* CommonFunction.swift */,
 				A8E102501D783CAA002887C7 /* Key.swift */,
@@ -305,6 +319,7 @@
 				51F3135B1D3E013A00BC88BE /* DrawerViewController.swift */,
 				51F313561D3E012100BC88BE /* Menu.h */,
 				51F313571D3E012100BC88BE /* Menu.m */,
+				A8E6167B1D7983EC00BC4C00 /* DrawerNameCell.swift */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -312,8 +327,19 @@
 		A8490C591D76B5F7009FDBE7 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
+				A83B0AA11D891DD80052476C /* CartViewController.swift */,
+				A83B0AA31D891E320052476C /* CartManager.swift */,
+				A83B0AA51D8931520052476C /* CartProductViewCell.swift */,
+				A83B0AA71D8956DC0052476C /* ProductObject.swift */,
 			);
 			name = Cart;
+			sourceTree = "<group>";
+		};
+		A87F75C41D86B28D006D1866 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FMDB;
 			sourceTree = "<group>";
 		};
 		A8D605E41D6EC94B005EF430 /* SubMenu */ = {
@@ -443,9 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				51F312DD1D3DE74100BC88BE /* LaunchScreen.storyboard in Resources */,
-				51F313671D3E02A400BC88BE /* Main.storyboard in Resources */,
 				512C4D321D45DE5F00BCAFDA /* Podfile in Resources */,
 				51F312DA1D3DE74100BC88BE /* Assets.xcassets in Resources */,
+				A83B0AAA1D897EC50052476C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,23 +550,29 @@
 				A8E102511D783CAA002887C7 /* Key.swift in Sources */,
 				A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */,
 				51F313581D3E012100BC88BE /* MainViewControllerObjc.m in Sources */,
+				A83B0AA81D8956DC0052476C /* ProductObject.swift in Sources */,
 				51D899971D3F5A73008A9F56 /* MyProfileViewController.swift in Sources */,
 				51F313641D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift in Sources */,
 				51F313591D3E012100BC88BE /* Menu.m in Sources */,
+				A83B0AA61D8931520052476C /* CartProductViewCell.swift in Sources */,
 				511CE63C1D40DADA0070BC3F /* MainMenuCollectionViewCell.swift in Sources */,
 				51F312D31D3DE74100BC88BE /* AppDelegate.swift in Sources */,
 				A8D605E61D6ECB9F005EF430 /* CustomTabBarController.swift in Sources */,
 				51F313691D3E53F900BC88BE /* MainMenuViewController.swift in Sources */,
+				A8E6167C1D7983EC00BC4C00 /* DrawerNameCell.swift in Sources */,
 				51F313621D3E01F000BC88BE /* KYDrawerController.swift in Sources */,
 				51D8999B1D3F5FD0008A9F56 /* CallusViewController.swift in Sources */,
 				5128CB861D41EB0200EF38E6 /* MenuViewController.swift in Sources */,
 				51F3135C1D3E013A00BC88BE /* MainViewController.swift in Sources */,
 				51D899991D3F5B08008A9F56 /* TandCViewController.swift in Sources */,
 				51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */,
+				A8E6167A1D793B9600BC4C00 /* OrdersTableViewCell.swift in Sources */,
 				51D899911D3F5A2B008A9F56 /* RewardsViewController.swift in Sources */,
 				512C4D371D46119D00BCAFDA /* CommonFunction.swift in Sources */,
 				51D8999D1D3F7DD9008A9F56 /* LoginViewController.swift in Sources */,
 				51D899951D3F5A57008A9F56 /* GiftCardViewController.swift in Sources */,
+				A83B0AA41D891E320052476C /* CartManager.swift in Sources */,
+				A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */,
 				512C4D351D45E6D400BCAFDA /* MIBadgeButton.swift in Sources */,
 				51F3135D1D3E013A00BC88BE /* DrawerViewController.swift in Sources */,
 				51D899931D3F5A45008A9F56 /* ReservationViewController.swift in Sources */,

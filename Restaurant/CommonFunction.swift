@@ -13,6 +13,15 @@ class CommonFunction {
     
    let LoginDetails = NSUserDefaults.standardUserDefaults()
     
+    let cartDefaults = NSUserDefaults.standardUserDefaults()
+    
+    var cartValue:Int = 0
+    
+    func CartValuePluse(){
+    
+        
+        cartDefaults.setInteger(cartValue++, forKey: Key().cartValue)
+    }
     
     func jsonparsing() {
     //Making Connection

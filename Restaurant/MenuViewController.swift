@@ -15,8 +15,10 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
    // @IBOutlet var navitem: UIBarButtonItem!
     
+    var cf = CommonFunction()
+    
     //var cartValue:String = "0"
-    var cartValue :Int = 0
+    var cartValue :Int = 22
     
     var catId:String?
     var catName:String?
@@ -40,6 +42,10 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     
     var swiftImages:[UIImage] = []
+    
+    //var po = ProductObject.self
+    
+    
 
     
     /*let itemTitle=[
@@ -63,14 +69,14 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
    
     @IBOutlet var navItm: UIBarButtonItem!
         
-   let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
+   //let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
     
     
     override func viewWillAppear(animated: Bool) {
         
         //self.tabBarItem.title = "gfdsg"
         print("cayId............... \(catId)")
-        badge(String(cartValue))
+        badge()
         
          navigationController?.visibleViewController?.navigationItem.title = catName
 
@@ -78,7 +84,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       badge()
     request(catId)
         
         
@@ -129,12 +135,11 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         print("cart tapped \(cartValue)")
         print(sender.tag)
         
-       
+        ProductObject().name_set(arr_name[sender.tag])
+               
         
-        
-        
-        badge(String(cartValue++))
-      
+        cf.CartValuePluse()
+        badge()
     }
     
     func request(var id:String?) {
@@ -198,18 +203,34 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
 
     }
     
-    func badge(value:String!){
+    func badge(){
     
+        var cartValue = cf.cartDefaults.integerForKey(Key().cartValue)
+        
+        print("button tapped \(cartValue)")
+        
+        
+        
         //Custom Badge View
+        let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
+        
         badgeButton.setTitle("Cart", forState: UIControlState.Normal)
         badgeButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        badgeButton.addTarget(self, action: "barButtonAction",forControlEvents: UIControlEvents.TouchUpInside)
+        badgeButton.badgeString = String(cartValue);
         badgeButton.badgeBackgroundColor = UIColor.whiteColor()
         badgeButton.badgeTextColor = UIColor.blackColor()
-        badgeButton.badgeString = value
-        //badgeButton.accessibilityIncrement()
-        
         let barButton : UIBarButtonItem = UIBarButtonItem(customView: badgeButton)
-        self.navigationItem.rightBarButtonItem = barButton
+        
+        navigationController?.navigationItem.rightBarButtonItem = barButton
+        //navigationController?.visibleViewController?.navigationItem.rightBarButtonItem = barButton
+        
+        //barButton.action = Selector("barButtonAction")
+    }
+    
+    func barButtonAction(sender: UIBarButtonItem) {
+    
+        print("barbuttonAction tapped")
     }
 
 }

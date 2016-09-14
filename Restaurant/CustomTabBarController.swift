@@ -37,6 +37,15 @@ class CustomTabBarController: UITabBarController {
     
     var storyBoard:UIStoryboard?
     
+    @IBAction func cartAction(sender: AnyObject) {
+        
+        print("cart icon tapped")
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewControllerWithIdentifier("SIDcart") as! CartViewController
+        self.presentViewController(nextViewController, animated:true, completion:nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

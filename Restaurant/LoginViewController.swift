@@ -13,7 +13,9 @@ class LoginViewController: UIViewController {
 
     var cf = CommonFunction()
     
+    @IBOutlet var containerView: UIView!
     
+    weak var currentViewController: UIViewController?
     
     var dataRows = NSArray()
     
@@ -120,6 +122,8 @@ class LoginViewController: UIViewController {
                         
                         
                     }
+                    
+                   
                     
                     var alert = UIAlertView(title: "Signin Success", message: "You successfully logged in ", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
