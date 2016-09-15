@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SDWebImage
+import CoreData
 
 class MenuViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
@@ -135,11 +136,79 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         print("cart tapped \(cartValue)")
         print(sender.tag)
         
-        ProductObject().name_set(arr_name[sender.tag])
-               
+        //ProductObject().name_set(arr_name[sender.tag])
+        
+        seedCart(arr_name[sender.tag], rate: arr_rate[sender.tag], catid: arr_catid[sender.tag], pid: arr_proid[sender.tag], image: arr_image[sender.tag], desc: arr_desc[sender.tag])
+        fetchCart()
+        fetchAll()
         
         cf.CartValuePluse()
         badge()
+    }
+    
+    func seedCart(name:String, rate:String, catid:String, pid:String, image:String, desc:String) {
+        
+        // create an instance of our managedObjectContext
+        let moc = DataController().managedObjectContext
+        
+        // we set up our entity by selecting the entity and context that we're targeting
+        let entity = NSEntityDescription.insertNewObjectForEntityForName("CartEntity", inManagedObjectContext: moc) as! CartEntity
+        
+        // add our data
+        
+        
+        entity.setValue(name, forKey: Key().cE_pro_name)
+        entity.setValue(rate, forKey: Key().cE_pro_rate)
+        entity.setValue(catid, forKey: Key().cE_pro_catid)
+        entity.setValue(pid, forKey: Key().cE_pro_id)
+        entity.setValue(image, forKey: Key().cE_pro_image)
+        entity.setValue(desc, forKey: Key().cE_pro_desc)
+        
+        // we save our entity
+        do {
+            try moc.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+    }
+    func fetchCart() {
+        let moc = DataController().managedObjectContext
+        let personFetch = NSFetchRequest(entityName: "CartEntity")
+        
+        do {
+            
+            
+            let fetchedCart = try moc.executeFetchRequest(personFetch) as! [CartEntity]
+            print("fetched name = \(fetchedCart.last?.pro_name)")
+            
+        } catch {
+            fatalError("Failed to fetch person: \(error)")
+        }
+    }
+    
+    func fetchAll(){
+        // Create Fetch Request
+        let fetchRequest = NSFetchRequest(entityName: "CartEntity")
+        
+        // Add Sort Descriptor
+        let sortDescriptor = NSSortDescriptor(key: Key().cE_pro_id, ascending: true)
+        //fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        // Execute Fetch Request
+        do {
+            let result = try DataController().managedObjectContext.executeFetchRequest(fetchRequest)
+            
+            for managedObject in result {
+                if let first = managedObject.valueForKey(Key().cE_pro_id), last = managedObject.valueForKey(Key().cE_pro_name) {
+                    print("\(first[1]) \(last)")
+                }
+            }
+            
+        } catch {
+            let fetchError = error as NSError
+            print(fetchError)
+        }
+    
     }
     
     func request(var id:String?) {
@@ -202,6 +271,8 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         
 
     }
+    
+    
     
     func badge(){
     

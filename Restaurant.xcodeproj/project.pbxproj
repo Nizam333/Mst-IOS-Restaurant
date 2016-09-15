@@ -37,10 +37,11 @@
 		51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3136A1D3E541100BC88BE /* MyordersViewController.swift */; };
 		A14734D4A5DA8DF3E2D471F8 /* Pods_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB31EF3DFD7CB87843EEA59 /* Pods_Restaurant.framework */; };
 		A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA11D891DD80052476C /* CartViewController.swift */; };
-		A83B0AA41D891E320052476C /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA31D891E320052476C /* CartManager.swift */; };
 		A83B0AA61D8931520052476C /* CartProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA51D8931520052476C /* CartProductViewCell.swift */; };
-		A83B0AA81D8956DC0052476C /* ProductObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA71D8956DC0052476C /* ProductObject.swift */; };
 		A83B0AAA1D897EC50052476C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83B0AA91D897EC50052476C /* Main.storyboard */; };
+		A83C11CA1D8AA4490085CFD1 /* cartModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83C11C81D8AA4490085CFD1 /* cartModel.xcdatamodeld */; };
+		A83C11CD1D8AA6090085CFD1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C11CC1D8AA6090085CFD1 /* DataController.swift */; };
+		A83C11DB1D8ABC590085CFD1 /* CartEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C11DA1D8ABC590085CFD1 /* CartEntity.swift */; };
 		A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86DA9D31D6DA24600E0E208 /* Urls.swift */; };
 		A8D605E61D6ECB9F005EF430 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */; };
 		A8E102511D783CAA002887C7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E102501D783CAA002887C7 /* Key.swift */; };
@@ -106,10 +107,11 @@
 		51F3136A1D3E541100BC88BE /* MyordersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyordersViewController.swift; sourceTree = "<group>"; };
 		75B28DFE3D915F4A5C48F246 /* Pods-Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A83B0AA11D891DD80052476C /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		A83B0AA31D891E320052476C /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		A83B0AA51D8931520052476C /* CartProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductViewCell.swift; sourceTree = "<group>"; };
-		A83B0AA71D8956DC0052476C /* ProductObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductObject.swift; sourceTree = "<group>"; };
 		A83B0AA91D897EC50052476C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A83C11C91D8AA4490085CFD1 /* cartModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cartModel.xcdatamodel; sourceTree = "<group>"; };
+		A83C11CC1D8AA6090085CFD1 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A83C11DA1D8ABC590085CFD1 /* CartEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartEntity.swift; sourceTree = "<group>"; };
 		A86DA9D31D6DA24600E0E208 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		A8D605E51D6ECB9F005EF430 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		A8E102501D783CAA002887C7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		51F312D11D3DE74100BC88BE /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				A83C11CB1D8AA5BF0085CFD1 /* Coredata */,
 				512C4D331D45E68200BCAFDA /* Badge */,
 				51D8998F1D3F59C1008A9F56 /* Project */,
 				51F313651D3E023600BC88BE /* KYDrawerController */,
@@ -252,6 +255,16 @@
 				51F313611D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift */,
 			);
 			name = KYDrawerController;
+			sourceTree = "<group>";
+		};
+		A83C11CB1D8AA5BF0085CFD1 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				A83C11C81D8AA4490085CFD1 /* cartModel.xcdatamodeld */,
+				A83C11CC1D8AA6090085CFD1 /* DataController.swift */,
+				A83C11DA1D8ABC590085CFD1 /* CartEntity.swift */,
+			);
+			name = Coredata;
 			sourceTree = "<group>";
 		};
 		A8490C521D76B469009FDBE7 /* MyOrders */ = {
@@ -302,7 +315,6 @@
 		A8490C571D76B506009FDBE7 /* Support Clasess */ = {
 			isa = PBXGroup;
 			children = (
-				A87F75C41D86B28D006D1866 /* FMDB */,
 				A86DA9D31D6DA24600E0E208 /* Urls.swift */,
 				512C4D361D46119C00BCAFDA /* CommonFunction.swift */,
 				A8E102501D783CAA002887C7 /* Key.swift */,
@@ -328,18 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				A83B0AA11D891DD80052476C /* CartViewController.swift */,
-				A83B0AA31D891E320052476C /* CartManager.swift */,
 				A83B0AA51D8931520052476C /* CartProductViewCell.swift */,
-				A83B0AA71D8956DC0052476C /* ProductObject.swift */,
 			);
 			name = Cart;
-			sourceTree = "<group>";
-		};
-		A87F75C41D86B28D006D1866 /* FMDB */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = FMDB;
 			sourceTree = "<group>";
 		};
 		A8D605E41D6EC94B005EF430 /* SubMenu */ = {
@@ -548,9 +551,11 @@
 				51F313631D3E01F000BC88BE /* KYEmbedDrawerControllerSegue.swift in Sources */,
 				5128CB881D41EE5300EF38E6 /* MenuTableViewCell.swift in Sources */,
 				A8E102511D783CAA002887C7 /* Key.swift in Sources */,
+				A83C11DB1D8ABC590085CFD1 /* CartEntity.swift in Sources */,
+				A83C11CA1D8AA4490085CFD1 /* cartModel.xcdatamodeld in Sources */,
 				A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */,
 				51F313581D3E012100BC88BE /* MainViewControllerObjc.m in Sources */,
-				A83B0AA81D8956DC0052476C /* ProductObject.swift in Sources */,
+				A83C11CD1D8AA6090085CFD1 /* DataController.swift in Sources */,
 				51D899971D3F5A73008A9F56 /* MyProfileViewController.swift in Sources */,
 				51F313641D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift in Sources */,
 				51F313591D3E012100BC88BE /* Menu.m in Sources */,
@@ -571,7 +576,6 @@
 				512C4D371D46119D00BCAFDA /* CommonFunction.swift in Sources */,
 				51D8999D1D3F7DD9008A9F56 /* LoginViewController.swift in Sources */,
 				51D899951D3F5A57008A9F56 /* GiftCardViewController.swift in Sources */,
-				A83B0AA41D891E320052476C /* CartManager.swift in Sources */,
 				A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */,
 				512C4D351D45E6D400BCAFDA /* MIBadgeButton.swift in Sources */,
 				51F3135D1D3E013A00BC88BE /* DrawerViewController.swift in Sources */,
@@ -830,6 +834,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A83C11C81D8AA4490085CFD1 /* cartModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A83C11C91D8AA4490085CFD1 /* cartModel.xcdatamodel */,
+			);
+			currentVersion = A83C11C91D8AA4490085CFD1 /* cartModel.xcdatamodel */;
+			path = cartModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51F312C71D3DE74100BC88BE /* Project object */;
 }

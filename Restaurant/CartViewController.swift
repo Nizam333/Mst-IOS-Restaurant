@@ -6,6 +6,7 @@
 //  Copyright © 2016 MST SOLUTIONS PRIVATE LIMITED. All rights reserved.
 //
 import UIKit
+import Foundation
 
 
 class CartViewController: UIViewController, UITableViewDataSource,  UITableViewDelegate {
@@ -34,16 +35,14 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
         presentViewController(alertView, animated: true, completion: nil)
     }
       func clearCart() {
-        CartManager.sharedInstance.clearCart()
+        
         tableView.reloadData()
         
         setEmptyViewVisible(true)
     }
     
    
-    func updateTotalCostsLabel() {
-        totalCostsLabel.text = productPriceFormatter.stringFromNumber(CartManager.sharedInstance.totalPriceInCart())
-    }
+   
     
    
     func setEmptyViewVisible(visible: Bool) {
@@ -72,8 +71,12 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
         let productCell = tableView.dequeueReusableCellWithIdentifier("cartcell") as! CartProductViewCell
         
         //let product = CartManager.sharedInstance.productAtIndexPath(indexPath)
-        let product = ProductObject()
-        productCell.itemNameLabel.text = product.name_get(indexPath.row)
+        //let product = ProductObject()
+        
+        
+        //productCell.itemNameLabel.text = product.name_get(indexPath.row)
+        
+        
         //productCell.itemPriceLabel.text = productPriceFormatter.stringFromNumber(product.productPrice())
         
         //if let imageURL = product.imageURL() {
@@ -90,39 +93,14 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = "Cart"
         
-        //tableView.estimatedRowHeight = 100
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.tableFooterView = UIView(frame: CGRectZero)
     }
     
-    /**
-     <#Description#>
-     
-     - parameter animated: <#animated description#>
-     */
-    override func viewWillAppear(animated: Bool) {
+      override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        //checkEmptyStateOfCart()
-        //tableView.reloadData()
-        
-       // updateTotalCostsLabel()
+       
     }
     
-    /**
-     <#Description#>
-     */
-    func checkEmptyStateOfCart() {
-        setEmptyViewVisible(CartManager.sharedInstance.numberOfItemsInCart() == 0)
-    }
-    
-    /**
-     <#Description#>
-     
-     - returns: <#return value description#>
-     */
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
+   
+   
 }

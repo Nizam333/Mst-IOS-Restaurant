@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="CartEntity" representedClassName=".CartEntity" syncable="YES">
+        <attribute name="pro_catid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pro_desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pro_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pro_image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pro_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pro_rate" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CartEntity" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>
