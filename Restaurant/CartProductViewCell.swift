@@ -10,11 +10,22 @@ import UIKit
 
 class CartProductViewCell: UITableViewCell {
 
-    @IBOutlet var productImageView: UIView!
+    @IBOutlet var itemImage: UIImageView!
+
+    @IBOutlet var itemPrice: UILabel!
+    @IBOutlet var itemName: UILabel!
+   
+    @IBOutlet var itemQty: UILabel!
     
-    @IBOutlet var itemNameLabel: UILabel!
-    @IBOutlet var itemPriceLabel: UILabel!
-    override func awakeFromNib() {
+    @IBOutlet var img_plus: UIButton!
+    
+    @IBOutlet var img_minus: UIButton!
+    //@IBOutlet var img_minus: NSLayoutConstraint!
+    //@IBOutlet var img_plus: UIImageView!
+    //@IBOutlet var img_minus: UIImageView!
+    
+    
+       override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

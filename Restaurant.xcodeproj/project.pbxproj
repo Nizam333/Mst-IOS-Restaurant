@@ -36,9 +36,9 @@
 		51F313691D3E53F900BC88BE /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F313681D3E53F900BC88BE /* MainMenuViewController.swift */; };
 		51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3136A1D3E541100BC88BE /* MyordersViewController.swift */; };
 		A14734D4A5DA8DF3E2D471F8 /* Pods_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB31EF3DFD7CB87843EEA59 /* Pods_Restaurant.framework */; };
+		A80E10591D8BB7D70037E8A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80E10581D8BB7D70037E8A6 /* Main.storyboard */; };
 		A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA11D891DD80052476C /* CartViewController.swift */; };
 		A83B0AA61D8931520052476C /* CartProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA51D8931520052476C /* CartProductViewCell.swift */; };
-		A83B0AAA1D897EC50052476C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83B0AA91D897EC50052476C /* Main.storyboard */; };
 		A83C11CA1D8AA4490085CFD1 /* cartModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83C11C81D8AA4490085CFD1 /* cartModel.xcdatamodeld */; };
 		A83C11CD1D8AA6090085CFD1 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C11CC1D8AA6090085CFD1 /* DataController.swift */; };
 		A83C11DB1D8ABC590085CFD1 /* CartEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C11DA1D8ABC590085CFD1 /* CartEntity.swift */; };
@@ -106,9 +106,9 @@
 		51F313681D3E53F900BC88BE /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		51F3136A1D3E541100BC88BE /* MyordersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyordersViewController.swift; sourceTree = "<group>"; };
 		75B28DFE3D915F4A5C48F246 /* Pods-Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.release.xcconfig"; sourceTree = "<group>"; };
+		A80E10581D8BB7D70037E8A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A83B0AA11D891DD80052476C /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		A83B0AA51D8931520052476C /* CartProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductViewCell.swift; sourceTree = "<group>"; };
-		A83B0AA91D897EC50052476C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A83C11C91D8AA4490085CFD1 /* cartModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cartModel.xcdatamodel; sourceTree = "<group>"; };
 		A83C11CC1D8AA6090085CFD1 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A83C11DA1D8ABC590085CFD1 /* CartEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartEntity.swift; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 				51D8998F1D3F59C1008A9F56 /* Project */,
 				51F313651D3E023600BC88BE /* KYDrawerController */,
 				51F312D21D3DE74100BC88BE /* AppDelegate.swift */,
-				A83B0AA91D897EC50052476C /* Main.storyboard */,
+				A80E10581D8BB7D70037E8A6 /* Main.storyboard */,
 				51F312D91D3DE74100BC88BE /* Assets.xcassets */,
 				51F312DB1D3DE74100BC88BE /* LaunchScreen.storyboard */,
 				51F312DE1D3DE74100BC88BE /* Info.plist */,
@@ -474,7 +474,7 @@
 				51F312DD1D3DE74100BC88BE /* LaunchScreen.storyboard in Resources */,
 				512C4D321D45DE5F00BCAFDA /* Podfile in Resources */,
 				51F312DA1D3DE74100BC88BE /* Assets.xcassets in Resources */,
-				A83B0AAA1D897EC50052476C /* Main.storyboard in Resources */,
+				A80E10591D8BB7D70037E8A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,5 +20,5 @@ class CartEntity: NSManagedObject {
     @NSManaged var pro_id: String?
     @NSManaged var pro_image: String?
     @NSManaged var pro_desc: String?
-    
+    @NSManaged var pro_qty: Int16
 }

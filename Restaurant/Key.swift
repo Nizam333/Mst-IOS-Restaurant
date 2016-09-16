@@ -26,4 +26,5 @@ class Key {
     var cE_pro_id = "pro_id"
     var cE_pro_image = "pro_image"
     var cE_pro_desc = "pro_desc"
+    var cE_pro_qty = "pro_qty"
 }

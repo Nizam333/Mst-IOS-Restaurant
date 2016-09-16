@@ -85,6 +85,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.visibleViewController?.navigationItem.title = catName
        badge()
     request(catId)
         
@@ -163,6 +164,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         entity.setValue(pid, forKey: Key().cE_pro_id)
         entity.setValue(image, forKey: Key().cE_pro_image)
         entity.setValue(desc, forKey: Key().cE_pro_desc)
+        entity.setValue(0, forKey: Key().cE_pro_qty)
         
         // we save our entity
         do {
