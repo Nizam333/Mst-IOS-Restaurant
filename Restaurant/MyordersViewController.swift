@@ -14,6 +14,7 @@ import SDWebImage
 class MyordersViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
     
+    @IBOutlet var progressView: ProgressView!
     
     // var tab_title:String?
     
@@ -101,6 +102,7 @@ class MyordersViewController: UIViewController , UITableViewDataSource, UITableV
     
     
     func request( id:String?) {
+        progressView.animateProgressView()
         print("Mainmenu base url "+Urls().Base_Url)
         Alamofire.request(.POST, Urls().Base_Url+Urls().PHP_FILE_MYORDERS, parameters: ["userid": id!])
             .responseJSON { response in
@@ -179,6 +181,8 @@ class MyordersViewController: UIViewController , UITableViewDataSource, UITableV
                     alert.show()
                 
                 }
+                
+                self.progressView.hideProgressView()
         }
         
         

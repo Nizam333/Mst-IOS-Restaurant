@@ -31,12 +31,15 @@ class MainMenuViewController: UIViewController , UICollectionViewDataSource, UIC
     
     var swiftImages:[UIImage] = []
     
-    
+    var cf = CommonFunction()
 
     var id_index = 0
     
+    
     @IBOutlet var collectionview: UICollectionView!
     
+    
+    @IBOutlet var progressView: ProgressView!
     
     
     
@@ -100,8 +103,15 @@ class MainMenuViewController: UIViewController , UICollectionViewDataSource, UIC
         print("MAin menu viewdid load")
         catergRequest()
         
+       
+        
+        
+        
+        //segments.addAnimation(animation, forKey: "ani")
     }
     func catergRequest(){
+        
+        progressView.animateProgressView()
         print("Mainmenu base url "+Urls().Base_Url)
         Alamofire.request(.POST, Urls().Base_Url+Urls().PHP_FILE_Bulk_Image, parameters: ["storeid": "S0001"])
             .responseJSON { response in
@@ -148,10 +158,12 @@ class MainMenuViewController: UIViewController , UICollectionViewDataSource, UIC
                 print(self.arr_prodname)
                 //
                 self.collectionview.reloadData()
+                
+                self.progressView.hideProgressView()
                 //print(records)
         }
+        
     }
     
-   
     
 }

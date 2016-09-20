@@ -47,6 +47,7 @@
 		A8E102511D783CAA002887C7 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E102501D783CAA002887C7 /* Key.swift */; };
 		A8E6167A1D793B9600BC4C00 /* OrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E616791D793B9600BC4C00 /* OrdersTableViewCell.swift */; };
 		A8E6167C1D7983EC00BC4C00 /* DrawerNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E6167B1D7983EC00BC4C00 /* DrawerNameCell.swift */; };
+		A8EBBB1B1D8FF9C200F3088A /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EBBB1A1D8FF9C200F3088A /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		A8E102501D783CAA002887C7 /* Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		A8E616791D793B9600BC4C00 /* OrdersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewCell.swift; sourceTree = "<group>"; };
 		A8E6167B1D7983EC00BC4C00 /* DrawerNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerNameCell.swift; sourceTree = "<group>"; };
+		A8EBBB1A1D8FF9C200F3088A /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		DC92A8FFA92F01E7B3FA68A0 /* Pods-Restaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +320,7 @@
 				A86DA9D31D6DA24600E0E208 /* Urls.swift */,
 				512C4D361D46119C00BCAFDA /* CommonFunction.swift */,
 				A8E102501D783CAA002887C7 /* Key.swift */,
+				A8EBBB1A1D8FF9C200F3088A /* ProgressView.swift */,
 			);
 			name = "Support Clasess";
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				5128CB861D41EB0200EF38E6 /* MenuViewController.swift in Sources */,
 				51F3135C1D3E013A00BC88BE /* MainViewController.swift in Sources */,
 				51D899991D3F5B08008A9F56 /* TandCViewController.swift in Sources */,
+				A8EBBB1B1D8FF9C200F3088A /* ProgressView.swift in Sources */,
 				51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */,
 				A8E6167A1D793B9600BC4C00 /* OrdersTableViewCell.swift in Sources */,
 				51D899911D3F5A2B008A9F56 /* RewardsViewController.swift in Sources */,

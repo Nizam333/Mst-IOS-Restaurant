@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CommonFunction {
     
     
@@ -16,6 +17,14 @@ class CommonFunction {
     let cartDefaults = NSUserDefaults.standardUserDefaults()
     
     var cartValue:Int = 0
+    
+    
+    func startProgress(view:UIView){
+        
+                
+        
+    }
+    
     
     func CartValuePluse(){
     

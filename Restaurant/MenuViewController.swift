@@ -70,6 +70,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
    
     @IBOutlet var navItm: UIBarButtonItem!
         
+    @IBOutlet var progressView: ProgressView!
    //let badgeButton : MIBadgeButton = MIBadgeButton(frame: CGRectMake(20, 20, 36, 36))
     
     
@@ -109,7 +110,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
        let cell = tableView.dequeueReusableCellWithIdentifier("IdCellMenu") as! MenuTableViewCell
         
         cell.itemName.text = arr_name[indexPath.row]
-        cell.itemprice.text = arr_rate[indexPath.row]
+        cell.itemprice.text = "$ "+arr_rate[indexPath.row]
         //cell.imageView?.image = iimage[indexPath.row]
 
        
@@ -132,10 +133,24 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         return cell
     }
     
-    
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+        return 2.5
+    }
     func  cartDetected(sender: UIButton)  {
         print("cart tapped \(cartValue)")
         print(sender.tag)
+        
+        
+        UIView.animateWithDuration(0.6 ,
+                                   animations: {
+                                    sender.transform = CGAffineTransformMakeScale(0.6, 0.6)
+            },
+                                   completion: { finish in
+                                    UIView.animateWithDuration(0.6){
+                                        sender.transform = CGAffineTransformIdentity
+                                        //sender.setImage(UIImage(named: "minus"), forState: UIControlState.Normal)
+                                    }
+        })
         
         //ProductObject().name_set(arr_name[sender.tag])
         
@@ -157,6 +172,8 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         
         // add our data
         
+        //CartEntity[2].
+        
         
         entity.setValue(name, forKey: Key().cE_pro_name)
         entity.setValue(rate, forKey: Key().cE_pro_rate)
@@ -164,7 +181,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
         entity.setValue(pid, forKey: Key().cE_pro_id)
         entity.setValue(image, forKey: Key().cE_pro_image)
         entity.setValue(desc, forKey: Key().cE_pro_desc)
-        entity.setValue(0, forKey: Key().cE_pro_qty)
+        entity.setValue(1, forKey: Key().cE_pro_qty)
         
         // we save our entity
         do {
@@ -215,6 +232,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     func request(var id:String?) {
         print("Mainmenu base url "+Urls().Base_Url)
+         self.progressView.animateProgressView()
         Alamofire.request(.POST, Urls().Base_Url+Urls().PHP_FILE_TAB_PRODUCT, parameters: ["category": id!])
             .responseJSON { response in
                 //print(response.request)  // original URL request
@@ -266,6 +284,7 @@ class MenuViewController: UIViewController , UITableViewDataSource, UITableViewD
                     //self.rate = self.arr_rate
                     // self.image = self.arr_image
                     self.tabView.reloadData()
+                    self.progressView.hideProgressView()
                     return
                 })
         }

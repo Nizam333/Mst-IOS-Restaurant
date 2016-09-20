@@ -20,6 +20,10 @@ class MyProfileViewController: UIViewController {
     
     @IBOutlet var conview: UIView!
     
+    
+    @IBOutlet var progressView: ProgressView!
+    
+    
     weak var currentViewController: UIViewController?
     
     @IBOutlet var lbl_name: UILabel!
@@ -100,6 +104,8 @@ class MyProfileViewController: UIViewController {
     }
 
     func request(var mob:String?) {
+        
+        self.progressView.animateProgressView()
         print("Mainmenu base url "+Urls().Base_Url)
         Alamofire.request(.POST, Urls().Base_Url+Urls().PHP_FILE_VIEWPROFILE, parameters: ["mobnum": mob!])
             .responseJSON { response in
@@ -146,6 +152,8 @@ class MyProfileViewController: UIViewController {
                 
                 
                 }
+                
+                self.progressView.hideProgressView()
         
         }
         

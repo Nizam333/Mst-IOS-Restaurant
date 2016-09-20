@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var tf_password: UITextField!
     @IBOutlet var btn_signIn: UIButton!
     
+    @IBOutlet var progressView: ProgressView!
     
     @IBAction func SignIn(sender: AnyObject) {
         
@@ -69,6 +70,7 @@ class LoginViewController: UIViewController {
     }
     func Request(var userr:String ,var pass:String){
         
+        progressView.animateProgressView()
         print("mobile= \(userr) password= \(pass)")
         
         print("Mainmenu base url "+Urls().Base_Url)
@@ -123,7 +125,7 @@ class LoginViewController: UIViewController {
                         
                     }
                     
-                   
+                  
                     
                     var alert = UIAlertView(title: "Signin Success", message: "You successfully logged in ", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
@@ -135,7 +137,7 @@ class LoginViewController: UIViewController {
                 alert.show()
                 }
                 
-                
+                self.progressView.hideProgressView()
                
                 
                 

@@ -20,6 +20,9 @@ class SignupViewController: UIViewController {
     @IBOutlet var tf_mobile: UITextField!
     @IBOutlet var tf_countrycode: UITextField!
     
+    @IBOutlet var progressView: ProgressView!
+    
+    
     @IBAction func signup(sender: AnyObject) {
         
         var name = self.tf_name.text
@@ -74,6 +77,8 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func Request(var name:String ,var email:String,var mobilenumber:String ,var pass:String){
+        
+        self.progressView.animateProgressView()
         
         print("signup name= \(name) email= \(email) mobile= \(mobilenumber) password= \(pass)")
         
@@ -136,7 +141,7 @@ class SignupViewController: UIViewController {
                     alert.show()
                 }
                 
-                
+                self.progressView.hideProgressView()
                 
                 
                 
