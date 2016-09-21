@@ -1338,7 +1338,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xVC-59-ooe" firstAttribute="top" secondItem="i3J-YR-Tkl" secondAttribute="bottom" constant="8" id="ERs-6P-ZEC"/>
                             <constraint firstItem="MDa-kw-mLc" firstAttribute="top" secondItem="i3J-YR-Tkl" secondAttribute="bottom" constant="8" id="LMT-wc-RE3"/>

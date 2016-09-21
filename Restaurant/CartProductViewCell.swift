@@ -31,6 +31,8 @@ class CartProductViewCell: UITableViewCell {
     
     func configureWithValue(value: UInt, incrementHandler: ButtonHandler?, decrementHandler: ButtonHandler?) {
         itemQty.text = String(value)
+        
+         print("incrementHandler value= \(String(value))")
         self.incrementHandler = incrementHandler
         self.decrementHandler = decrementHandler
     }
@@ -40,10 +42,10 @@ class CartProductViewCell: UITableViewCell {
         
         UIView.animateWithDuration(0.6 ,
                                    animations: {
-                                    self.img_plus.transform = CGAffineTransformMakeScale(0.3, 0.3)
+                                    self.img_plus.transform = CGAffineTransformMakeScale(0.6, 0.6)
             },
                                    completion: { finish in
-                                    UIView.animateWithDuration(0.2){
+                                    UIView.animateWithDuration(0.6){
                                         self.img_plus.transform = CGAffineTransformIdentity
                                         //sender.setImage(UIImage(named: "minus"), forState: UIControlState.Normal)
                                     }
@@ -58,10 +60,10 @@ class CartProductViewCell: UITableViewCell {
         
         UIView.animateWithDuration(0.6 ,
                                    animations: {
-                                    self.img_minus.transform = CGAffineTransformMakeScale(0.3, 0.3)
+                                    self.img_minus.transform = CGAffineTransformMakeScale(0.6, 0.6)
             },
                                    completion: { finish in
-                                    UIView.animateWithDuration(0.2){
+                                    UIView.animateWithDuration(0.6){
                                         self.img_minus.transform = CGAffineTransformIdentity
                                         //sender.setImage(UIImage(named: "minus"), forState: UIControlState.Normal)
                                     }

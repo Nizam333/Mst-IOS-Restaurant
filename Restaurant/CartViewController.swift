@@ -14,7 +14,8 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
     
     
     @IBOutlet var tabView: UITableView!
-    var assignments = [CartEntity]()
+    
+    var results:NSArray = []
     
     let itemTitle=[
     "Chicken",
@@ -42,7 +43,6 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetch()
         
         UIView.animateWithDuration(0.6 ,
                                    animations: {
@@ -75,26 +75,13 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
     }
     
     
-    func fetch(){
-        let fetchRequest = NSFetchRequest(entityName: "CartEntity")
-        
-        do  {
-            let fetchedResults = try moc.executeFetchRequest(fetchRequest) as! [CartEntity]
-                assignments = fetchedResults
-                tabView.reloadData()
-                print(assignments.count)
-            }catch{
-                print("Could not retrieve any results \(error)")
-            }
-        
-        
-    }
+    
 
     func calculateTotalPrice()  {
          do {
         var fetchRequest = self.allCartFetchRequest()
         fetchRequest.returnsObjectsAsFaults = false;
-        var results: NSArray = try DataController().managedObjectContext.executeFetchRequest(fetchRequest)
+         results = try DataController().managedObjectContext.executeFetchRequest(fetchRequest)
             
             //assignments = results as! [CartEntity]
         
@@ -102,12 +89,12 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
         for res in results {
             var price = Double(res.valueForKey("pro_rate") as! String)
             var qty = Double(res.valueForKey("pro_qty") as! NSInteger)
-            var total = qty*price!
-            print("total = \(total)")
+           // var total = qty*price!
+            print("total = \(price)")
             
             
             
-            Total_all += total
+            Total_all += price!
         }
         
             self.lbl_Total.text = "$ "+String(Total_all)
@@ -216,14 +203,27 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
             guard let row = self.tabView.indexPathForCell(CartProductViewCell)?.row else { return }
             
             
-           
+            print("increment handler interface")
             
-            // 1
-            ///self.assignments[row].pro_qty = self.assignments[row].pro_qty + 1
+            let person = self.results[row] as! NSManagedObject
             
+            
+            var price = person.valueForKey(Key().cE_pro_rate) as! String
+            var qty = person.valueForKey(Key().cE_pro_qty) as! Int
+            
+            var price_Per_qty = Double(price)! / Double(qty)
+            qty = qty + 1
+            person.setValue(qty, forKey: Key().cE_pro_qty)
+            
+            
+            var total = price_Per_qty * Double(qty)
+            print("price total = \(total)")
+            person.setValue(String(total), forKey: Key().cE_pro_rate)
             // we save our entity
             do {
-                try self.moc.save()
+                
+                try person.managedObjectContext?.save()
+                //try self.moc.save()
             } catch {
                 fatalError("Failure to save context: \(error)")
             }
@@ -235,29 +235,53 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
     
     
     private func decrementHandler() -> ButtonHandler {
-        return { [unowned self] CartProductViewCell in
-            guard
-                let row = self.tabView.indexPathForCell(CartProductViewCell)?.row
-                
-                
-                where self.assignments[row].pro_qty > 0
-                else { return }
-            self.assignments[row].pro_qty = self.assignments[row].pro_qty - 1
+        
+        
+            return { [unowned self] CartProductViewCell in
+            guard let row = self.tabView.indexPathForCell(CartProductViewCell)?.row else { return }
             
-            // we save our entity
-            do {
-                try self.moc.save()
-            } catch {
-                fatalError("Failure to save context: \(error)")
+            
+            print("increment handler interface")
+            
+            let person = self.results[row] as! NSManagedObject
+                
+                
+            var price = person.valueForKey(Key().cE_pro_rate) as! String
+            var qty = person.valueForKey(Key().cE_pro_qty) as! Int
+                
+            
+           
+            if qty > 1 {
+                
+                var price_Per_qty = Double(price)! / Double(qty)
+                 qty = qty - 1
+                 person.setValue(qty, forKey: Key().cE_pro_qty)
+                
+                
+                var total = price_Per_qty * Double(qty)
+                print("price total = \(total)")
+                person.setValue(String(total), forKey: Key().cE_pro_rate)
+                
+                do {
+                    
+                    try person.managedObjectContext?.save()
+                    //try self.moc.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+                
+                self.reloadCellAtRow(row)
             }
+            else { return }
+           
             
-            self.reloadCellAtRow(row)
         }
     }
     
     private func reloadCellAtRow(row: Int) {
         let indexPath = NSIndexPath(forRow: row, inSection: 0)
         
+        //calculateTotalPrice()
         tabView.beginUpdates()
         tabView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         tabView.endUpdates()
@@ -317,8 +341,39 @@ class CartViewController: UIViewController, UITableViewDataSource,  UITableViewD
         case .Delete:
             
             do {
-            DataController().managedObjectContext.deleteObject(fetchedResultsController?.objectAtIndexPath(indexPath) as! CartEntity)
-            try DataController().managedObjectContext.save()
+                //reference to our app delegate
+               // let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as AppDelegate)
+                let context: NSManagedObjectContext = DataController().managedObjectContext
+                
+                let person = self.results[indexPath.row] as! NSManagedObject
+                
+                
+                var proID = person.valueForKey(Key().cE_pro_id) as! String
+                
+                print("proID  = \(proID)")
+                
+                let request = NSFetchRequest(entityName: "CartEntity")
+                request.includesSubentities = false
+                request.returnsObjectsAsFaults = false
+                
+                request.predicate = NSPredicate(format: "pro_id == %@", proID)
+               let itemss = try DataController().managedObjectContext.executeFetchRequest(request) as! NSManagedObject
+                
+                print("predicate result = \(itemss)")
+                
+                for item in itemss {
+                    
+                    var deleteUserError: NSError?
+                    
+                    DataController().managedObjectContext.deleteObject(item)
+                    DataController().managedObjectContext.save(&deleteUserError)
+                }
+                
+                
+                //tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+            //DataController().managedObjectContext.deleteObject(fetchedResultsController?.objectAtIndexPath(indexPath) as! CartEntity)
+            //try DataController().managedObjectContext.save()
             }catch{
             print(error)
             
