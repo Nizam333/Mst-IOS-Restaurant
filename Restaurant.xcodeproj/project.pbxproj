@@ -37,6 +37,8 @@
 		51F3136B1D3E541100BC88BE /* MyordersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F3136A1D3E541100BC88BE /* MyordersViewController.swift */; };
 		A14734D4A5DA8DF3E2D471F8 /* Pods_Restaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB31EF3DFD7CB87843EEA59 /* Pods_Restaurant.framework */; };
 		A80E10591D8BB7D70037E8A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80E10581D8BB7D70037E8A6 /* Main.storyboard */; };
+		A812C7521D951091000FDE83 /* carVCbackup in Resources */ = {isa = PBXBuildFile; fileRef = A812C7511D951091000FDE83 /* carVCbackup */; };
+		A812C7541D956032000FDE83 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A812C7531D956032000FDE83 /* Booking.swift */; };
 		A83B0AA21D891DD80052476C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA11D891DD80052476C /* CartViewController.swift */; };
 		A83B0AA61D8931520052476C /* CartProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83B0AA51D8931520052476C /* CartProductViewCell.swift */; };
 		A83C11CA1D8AA4490085CFD1 /* cartModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A83C11C81D8AA4490085CFD1 /* cartModel.xcdatamodeld */; };
@@ -108,6 +110,8 @@
 		51F3136A1D3E541100BC88BE /* MyordersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyordersViewController.swift; sourceTree = "<group>"; };
 		75B28DFE3D915F4A5C48F246 /* Pods-Restaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Restaurant.release.xcconfig"; path = "Pods/Target Support Files/Pods-Restaurant/Pods-Restaurant.release.xcconfig"; sourceTree = "<group>"; };
 		A80E10581D8BB7D70037E8A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A812C7511D951091000FDE83 /* carVCbackup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = carVCbackup; sourceTree = "<group>"; };
+		A812C7531D956032000FDE83 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		A83B0AA11D891DD80052476C /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		A83B0AA51D8931520052476C /* CartProductViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartProductViewCell.swift; sourceTree = "<group>"; };
 		A83C11C91D8AA4490085CFD1 /* cartModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = cartModel.xcdatamodel; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 			children = (
 				A83B0AA11D891DD80052476C /* CartViewController.swift */,
 				A83B0AA51D8931520052476C /* CartProductViewCell.swift */,
+				A812C7511D951091000FDE83 /* carVCbackup */,
+				A812C7531D956032000FDE83 /* Booking.swift */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				512C4D321D45DE5F00BCAFDA /* Podfile in Resources */,
 				51F312DA1D3DE74100BC88BE /* Assets.xcassets in Resources */,
 				A80E10591D8BB7D70037E8A6 /* Main.storyboard in Resources */,
+				A812C7521D951091000FDE83 /* carVCbackup in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +566,7 @@
 				A86DA9D41D6DA24600E0E208 /* Urls.swift in Sources */,
 				51F313581D3E012100BC88BE /* MainViewControllerObjc.m in Sources */,
 				A83C11CD1D8AA6090085CFD1 /* DataController.swift in Sources */,
+				A812C7541D956032000FDE83 /* Booking.swift in Sources */,
 				51D899971D3F5A73008A9F56 /* MyProfileViewController.swift in Sources */,
 				51F313641D3E01F000BC88BE /* KYEmbedMainControllerSegue.swift in Sources */,
 				51F313591D3E012100BC88BE /* Menu.m in Sources */,

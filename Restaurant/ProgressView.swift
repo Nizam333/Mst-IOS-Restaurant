@@ -76,7 +76,7 @@ class ProgressView: UIView {
     func hideProgressView() {
         progressLayer.strokeEnd = 0.0
         progressLayer.removeAllAnimations()
-        progressLabel.text = "Load content"
+        //progressLabel.text = ""
     }
     
     func animateProgressView() {

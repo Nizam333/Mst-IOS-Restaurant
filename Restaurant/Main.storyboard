@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1333,8 +1333,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="suT-bR-li3" id="G55-o1-7G8"/>
-                                    <outlet property="delegate" destination="suT-bR-li3" id="3eG-hF-N1o"/>
+                                    <outlet property="dataSource" destination="suT-bR-li3" id="VGC-Cc-NTB"/>
+                                    <outlet property="delegate" destination="suT-bR-li3" id="cz8-31-fAR"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -1360,13 +1360,16 @@
                     <navigationItem key="navigationItem" title="Cart List" id="2OG-uR-uQe">
                         <barButtonItem key="rightBarButtonItem" title="Clear All" id="D2A-Ai-gdI">
                             <color key="tintColor" red="0.18721163272857666" green="0.47797656059265137" blue="0.089856572449207306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="Action_Clear:" destination="suT-bR-li3" id="H05-oa-VhM"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Action_Clear" destination="D2A-Ai-gdI" id="h7v-PO-9Lb"/>
                         <outlet property="btn_PlaceOrder" destination="guI-Cf-dtk" id="dyo-YE-eas"/>
                         <outlet property="lbl_Total" destination="MDa-kw-mLc" id="YWF-qY-QnY"/>
-                        <outlet property="tabView" destination="i3J-YR-Tkl" id="95a-wt-E0I"/>
+                        <outlet property="tabView" destination="i3J-YR-Tkl" id="GcT-MC-EQv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCf-c6-Psw" userLabel="First Responder" sceneMemberID="firstResponder"/>

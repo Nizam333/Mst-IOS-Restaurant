@@ -118,7 +118,7 @@ class CustomTabBarController: UITabBarController {
 
                     //var itesss = UITabBarItem()
                     //itesss.title = self.arr_prodname[i]
-                   var items = UITabBarItem(title:  self.arr_prodname[i], image: nil, tag: i)
+                   let items = UITabBarItem(title:  self.arr_prodname[i], image: nil, tag: i)
                     
                     self.item?.append(items)
                     
